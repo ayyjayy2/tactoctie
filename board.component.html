@@ -1,0 +1,19 @@
+
+<!-- text interpolation-->
+<h1>Current Player: {{ player }} </h1>
+
+<!--event binding-->
+<button nbButton outline status="danger" (click)="newGame()" style="margin-bottom: 15px;">Start New Game</button>
+
+<!--structural directive-->
+<h2 *ngIf="winner">Player {{ winner }} won the game!</h2>
+
+<main>
+    <!--val renders an X or O-->
+    <app-square 
+        *ngFor="let val of squares; let i = index" 
+        [value]="val"
+        (click)="makeMove(i)">
+
+    </app-square>
+</main>
