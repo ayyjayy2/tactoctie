@@ -1,0 +1,7 @@
+<!-- <p>square works!</p>
+<p>{{rando}}</p> -->
+
+<button nbButton *ngIf="!value"> {{ value }} </button>
+<!-- hero is part of nebular and adds a gradient effect to the button appearance-->
+<button nbButton hero status="success" *ngIf="value == 'X'">{{ value }} </button>
+<button nbButton hero status="infor" *ngIf="value == 'O'"> {{ value }} </button>
